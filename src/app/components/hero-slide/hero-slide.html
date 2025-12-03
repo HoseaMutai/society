@@ -1,0 +1,22 @@
+<div class="hero-slider">
+
+  <div
+    class="slide"
+    *ngFor="let item of slides; let i = index"
+    [ngClass]="{active: i === current}"
+  >
+    <div class="overlay"></div>
+
+    <div class="content">
+
+      <span class="small-heading">{{ item.sub }}</span>
+
+      <h1>
+        {{ item.title }}
+      </h1>
+
+    </div>
+  </div>
+
+</div>
+

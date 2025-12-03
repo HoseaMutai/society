@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<!--Products Intro-->
+<div class="about-hero-section">
+  <div class="content-container">
+    <p class="sub-heading">PRODUCTS</p>
+    <h1 class="main-heading">
+      Individual/Personal<br />
+      Products From Our Society.
+    </h1>
+    <div class="separator"></div>
+  </div>
+</div>
+
+  <!--Individual content-->
+<section class="services-section">
+  <!-- Background Image With Overlay -->
+  <div class="header-bg">
+    <img src="/images/landing1.jpg" alt="Our Services" />
+    <div class="overlay"></div>
+
+    <div class="header-text">
+      <h2>Amazing for You</h2>
+      <p>Whether you’re just starting your investment journey or looking to grow your wealth faster, we have a 
+plan that fits your goals. Choose the tier that works best for you</p>
+    </div>
+  </div>
+
+  <!-- Service Items -->
+  <div class="services-container">
+    <div class="service-box" *ngFor="let item of services">
+      <div class="icon">
+        <i [class]="item.icon"></i>
+      </div>
+
+      <h4>{{ item.title }}</h4>
+
+      <p>
+        {{ item.description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+  <app-footer></app-footer>

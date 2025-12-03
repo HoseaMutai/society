@@ -1,0 +1,43 @@
+<footer class="app-footer">
+  <div class="footer-content-wrapper">
+    <div class="footer-column branding-column">
+      <div class="logo-area">
+        <span class="logo-text">Carthage Society</span>
+      </div>
+      <p class="company-mission">
+    Simplify your saving and optimize your investing. We empower our members to save 
+    consistently while earning strong, reliable returns on their investments.
+      </p>
+
+      <div class="social-icons">
+        <a *ngFor="let icon of socialIcons" 
+           [href]="icon.url" 
+           target="_blank" 
+           rel="noopener" 
+           class="social-icon-link">
+          <i [class]="icon.class"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column links-group">
+      <div class="link-list">
+        <h3 class="link-heading">Site Map</h3>
+        <ul>
+          <li *ngFor="let link of siteMapLinks">
+            <a [routerLink]="link.url" (click)="scrollToTop()">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="link-list">
+        <h3 class="link-heading">Legal</h3>
+        <ul>
+          <li *ngFor="let link of legalLinks">
+            <a [routerLink]="link.url" (click)="scrollToTop()">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

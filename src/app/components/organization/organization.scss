@@ -1,0 +1,110 @@
+/* Product intro*/
+/* About hero section*/
+.about-hero-section {
+  /* Set a fixed height or minimum height */
+  min-height: 400px;
+  
+  /* Use the background image */
+  background-image: 
+    /* 1. Dark overlay for readability (adjust opacity as needed) */
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    /* 2. Your brick/interior background image */
+    url('/images/landing1.jpg'); 
+    
+  /* Background properties for proper display */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: for parallax-like effect */
+  
+  /* Centering the content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Ensure text is on top of the background */
+  position: relative;
+  overflow: hidden;
+}
+
+.content-container {
+  /* Limit max width for better readability on large screens */
+  max-width: 900px;
+  padding: 20px;
+}
+
+.sub-heading {
+  /* Top-most, smaller text */
+  color: #d4a429; /* White */
+  font-family: Arial, sans-serif; /* Use your project's font */
+  font-size: 0.9em;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  /* The large, styled text */
+  color: #fff; /* White */
+  font-family: serif; /* Use a serif font for the elegant look */
+  font-size: 3em; /* Adjust size for desktop */
+  font-weight: 400; /* Lighter weight */
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Specific styling for the '&' and 'capable' parts if desired (e.g., italics) */
+/* .main-heading span {
+  font-style: italic;
+} */
+
+.separator {
+  /* The small gold line underneath the heading */
+  width: 50px;
+  height: 3px;
+  background-color: #d4af37; /* Gold/Yellow color */
+  margin: 20px auto 0 auto; /* Center it horizontally */
+}
+
+/*Organization Explanation*/
+.org-section {
+  padding: 60px 20px;
+  background: #f8f8f8; // soft background
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+  }
+}
+/* organization media*/
+
+/* end of organization media*/
+@media (max-width: 1024px) {
+  .about-hero-section {
+    height: 75vh;
+
+    .content-container {
+      width: 70%;
+      top: 50%;
+      left: 7%;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+  }
+}

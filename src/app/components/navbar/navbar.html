@@ -1,0 +1,48 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<nav class="navbar">
+  <div class="container">
+
+    <div class="logo">
+      <img src="/images/logo3.png" />
+      <h2>CARTHAGE SOCIETY<span>Freedom.Wealth.Legacy</span></h2>
+    </div>
+     <!-- HAMBURGER MENU -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="menu">
+
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+      </li>
+
+      <!-- PRODUCTS DROPDOWN -->
+      <li class="dropdown">
+        <a>
+          PRODUCTS
+          <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a routerLink="/organization">Organizations</a></li>
+          <li><a routerLink="/individual">Individuals</a></li>
+        </ul>
+      </li>
+
+      <!-- ABOUT DROPDOWN -->
+      <li class="dropdown">
+        <a routerLink="/about" routerLinkActive="active">
+          ABOUT
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

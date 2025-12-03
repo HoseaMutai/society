@@ -1,0 +1,113 @@
+/* --- Base Footer Styling --- */
+.app-footer {
+  background-color: #1a434d; /* Dark teal background color */
+  color: #c9d0d3; /* Light text color */
+  padding: 60px 20px 40px 20px;
+  /* Optional: Add the subtle background graphic shown in your image */
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 50%);
+}
+
+.footer-content-wrapper {
+  display: grid;
+  /* Define columns: one for branding, two for link columns */
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Branding/Left Column --- */
+.logo-area {
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f7b32c; /* The gold/yellow color from the logo */
+}
+
+.company-mission {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.social-icon-link {
+  color: #c9d0d3;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.social-icon-link:hover {
+  color: #f7b32c; /* Highlight color on hover */
+}
+
+/* --- Back to Top Button --- */
+
+
+/* --- Link Columns --- */
+.links-group {
+    /* Combine the two link columns into a flex container for better spacing on small screens */
+    display: contents; 
+}
+
+.link-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.link-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-list li {
+  margin-bottom: 8px;
+}
+
+.link-list a {
+  color: #c9d0d3;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.link-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .footer-content-wrapper {
+    /* Two columns on medium screens: Branding on the left, Links on the right */
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .link-list {
+    margin-bottom: 40px; /* Space out the link lists */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content-wrapper {
+    /* Stack all columns vertically on small screens */
+    grid-template-columns: 1fr; 
+  }
+  
+  .branding-column {
+    margin-bottom: 30px;
+  }
+}

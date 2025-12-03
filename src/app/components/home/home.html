@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+<app-hero-slide></app-hero-slide>
+<!--Welcome section-->
+<section class="welcome-container">
+  <div class="icon-wrapper">
+    <span class="recycle-icon">&#x267B;</span> 
+  </div>
+
+  <h1 class="welcome-title">
+    Welcome to Carthage Society
+  </h1>
+
+  <p class="more-about-us">
+    ABOUT US
+  </p>
+
+  <p class="company-description">
+   At Carthage, we simplify your saving and optimize your investing. We empower our members to save 
+consistently while earning strong, reliable returns on their investments.
+Our investment strategy includes both U.S. Dollars and Kenya Shilling denominated assets, creating a 
+resilient foundation for sustainable wealth growth that stands strong through any market.
+  </p>
+</section>
+<div class="thick-line"></div>
+
+<!--Investment part-->
+<section class="invest-section">
+  <h2 class="main-title">INVESTMENT STRATEGY</h2>
+
+  <div class="invest-row">
+
+    <!-- Service 1 -->
+    <div class="invest-box">
+      <i class="fa-solid fa-chart-line icon"></i>
+      <h3>Long term Investment Philosophy</h3>
+      <p>
+       Our investment approach is rooted in disciplined, long-term value creation. We acquire high-quality businesses—locally and internationally—at fair valuations and hold them for sustained growth and stable returns. This allows us to benefit from compounding while maintaining a conservative risk profile.
+      </p>
+    </div>
+
+
+    <!-- Service 2 -->
+    <div class="invest-box">
+      <i class="fa-solid fa-sack-dollar icon"></i>
+      <h3>Strategic Capital Allocation</h3>
+      <p>
+      When attractive equity opportunities are limited, we deploy capital into secure, income-generating assets such as treasury bills, government bonds, and investment-grade corporate debt. This ensures consistent liquidity, capital preservation, and stable returns across market cycles.
+      </p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="invest-box">
+      <i class="fa-solid fa-triangle-exclamation icon"></i>
+      <h3>Proven Perfomance & Risk Management</h3>
+      <p>
+        Our diversified and methodical strategy has consistently delivered competitive, risk-adjusted returns. Over time, it has outperformed many traditional asset classes while safeguarding investor capital.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!--Products Section-->
+<section class="services-container">
+  <h2 class="section-title">Carthage Products</h2>
+
+  <div class="service-cards-grid">
+    <div *ngFor="let service of services" class="service-card">
+      
+      <div class="card-image-wrapper">
+        <img [src]="service.imageUrl" [alt]="service.title" class="card-image">
+      </div>
+      
+      <div class="card-content">
+        <h3 class="card-title">{{ service.title }}</h3>
+        <h4 style="font-style: italic;">{{service.topic}}</h4>
+        <p class="card-description">{{ service.description }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+
+
+
+
+
+

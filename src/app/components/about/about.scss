@@ -1,0 +1,398 @@
+/* About hero section*/
+.about-hero-section {
+  /* Set a fixed height or minimum height */
+  min-height: 400px;
+  
+  /* Use the background image */
+  background-image: 
+    /* 1. Dark overlay for readability (adjust opacity as needed) */
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    /* 2. Your brick/interior background image */
+    url('/images/landing1.jpg'); 
+    
+  /* Background properties for proper display */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: for parallax-like effect */
+  
+  /* Centering the content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Ensure text is on top of the background */
+  position: relative;
+  overflow: hidden;
+}
+
+.content-container {
+  /* Limit max width for better readability on large screens */
+  max-width: 900px;
+  padding: 20px;
+}
+
+.sub-heading {
+  /* Top-most, smaller text */
+  color: #f7bf08; /* White */
+  font-family: Arial, sans-serif; /* Use your project's font */
+  font-size: 0.9em;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  /* The large, styled text */
+  color: #fff; /* White */
+  font-family: serif; /* Use a serif font for the elegant look */
+  font-size: 3em; /* Adjust size for desktop */
+  font-weight: 400; /* Lighter weight */
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Specific styling for the '&' and 'capable' parts if desired (e.g., italics) */
+/* .main-heading span {
+  font-style: italic;
+} */
+
+.separator {
+  /* The small gold line underneath the heading */
+  width: 50px;
+  height: 3px;
+  background-color: #d4af37; /* Gold/Yellow color */
+  margin: 20px auto 0 auto; /* Center it horizontally */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .about-hero-section {
+    min-height: 300px;
+  }
+  .main-heading {
+    font-size: 2em; /* Smaller font on mobile */
+  }
+}
+/*Mission, Vision & Goals*/
+/* --- Section Container --- */
+.mission-vision-section {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.header-text-column {
+  /* Takes about 40% of the width */
+  flex: 0 0 40%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.description-column {
+  /* Takes about 55% of the width */
+  flex: 0 0 55%;
+  position: relative;
+}
+
+.section-tag {
+  color: #555;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-heading {
+  font-family: serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.description-column p {
+  color: #555;
+  line-height: 1.6;
+  padding-left: 20px; /* Aligns with the CTA button below it */
+  border-top: 1px solid #ccc; /* Thin separator line above text */
+  padding-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  background-color: #28a745; /* Dark Green CTA button */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 20px; /* Align with the description text padding */
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #1e7e34;
+}
+
+/* --- Content Grid (Story, Mission, Vision) --- */
+.content-grid {
+  display: grid;
+  /* Creates a 2x2 layout, but the Story card spans two rows */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; 
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 8px;
+  color: #fff;
+  overflow: hidden;
+  display: flex; /* For centering content in Mission/Vision cards */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0;
+}
+.card-description-goals{
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #d9f5e5;
+}
+
+.card-description {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+.card-description-mission{
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* --- Specific Card Styles --- */
+.story-card {
+  grid-row: 1 / span 2; /* Spans both the Mission and Vision rows */
+  position: relative;
+  
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: brightness(50%);
+}
+
+.story-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Dark gradient overlay to ensure text visibility */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 30px;
+  z-index: 2;
+}
+
+.mission-card {
+  grid-column: 2 / 3;
+}
+
+.vision-card {
+  grid-column: 2 / 3;
+}
+
+/* --- Colors --- */
+.light-green-bg {
+  background-color: #d9f5e5; /* Matches the light green color */
+  color: #333; /* Darker text for light background */
+}
+
+.dark-green-bg {
+  background-color: #004d40;
+   /* Matches the dark green color */
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 1024px) {
+  .section-heading {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .top-content-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text-column,
+  .description-column {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  
+  .description-column p {
+    padding-left: 0;
+  }
+  
+  .cta-button {
+    margin-left: 0;
+  }
+
+  /* Stack the grid items */
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-card {
+    grid-row: auto;
+    /* Ensure height is set for mobile stack */
+    min-height: 300px; 
+  }
+  
+  .mission-card,
+  .vision-card {
+    grid-column: 1 / 2;
+  }
+}
+/* values*/
+/* --- Section Container --- */
+.values-guide-section {
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+/* --- Header Styling --- */
+.header-container {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.main-title {
+  font-family: serif;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 3px;
+  background-color: #d4af37; /* Gold color */
+  margin: 0 auto 20px auto;
+}
+
+.intro-text {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Grid Wrapper (Flexbox for 4 columns) --- */
+.values-grid-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* --- Individual Value Card --- */
+.value-card {
+  /* Flex basis for exactly 4 cards in a row with 20px gap */
+  flex: 0 0 calc(25% - 15px); 
+  max-width: calc(25% - 15px);
+  
+  padding: 30px;
+  text-align: left;
+  
+  /* Dashed Gold Border */
+  border: 1px dashed #d4af37;
+  border-radius: 5px;
+}
+
+/* --- Icon and Category Header --- */
+.icon-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-header i {
+  /* Style for the gold icon */
+  color: #d4af37;
+  font-size: 2.2em;
+  margin-right: 15px;
+}
+
+.icon-header .category {
+  /* Style for the small, capitalized category text */
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.card-title {
+  font-family: serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.card-description {
+  color: #777;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Two cards per row on tablets */
+@media (max-width: 992px) {
+  .value-card {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    margin-bottom: 20px; /* Space between rows */
+  }
+}
+
+/* One card per row on mobile phones */
+@media (max-width: 1024px) {
+  .value-card {
+    flex: 0 0 100%;
+    max-width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .about-hero-section {
+    height: 75vh;
+
+    .content-container {
+      width: 70%;
+      top: 50%;
+      left: 7%;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+  }
+}
+
